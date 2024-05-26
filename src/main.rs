@@ -1,7 +1,7 @@
+use crate::gigachat::client::GigaChatClient;
+use crate::gigachat::types::Question;
 use std::env;
 use std::error::Error;
-use crate::gigachat::client::GigaChatClient;
-use crate::gigachat::types::{Question};
 
 mod gigachat;
 

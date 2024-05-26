@@ -20,20 +20,23 @@ pub struct Question {
 }
 
 impl Question {
-    pub fn from_string( message: String, model: String, max_tokens: u32) -> Self {
+    pub fn from_string(message: String, model: String, max_tokens: u32) -> Self {
         Question {
             model,
-            messages: vec![
-                Message {
-                    role: "user".to_string(),
-                    content: message,
-                }
-            ],
+            messages: vec![Message {
+                role: "user".to_string(),
+                content: message,
+            }],
             max_tokens,
         }
     }
 
-    pub fn from_string_with_context(context: String, message: String, model: String, max_tokens: u32) -> Self {
+    pub fn from_string_with_context(
+        context: String,
+        message: String,
+        model: String,
+        max_tokens: u32,
+    ) -> Self {
         Question {
             model,
             messages: vec![
@@ -44,7 +47,7 @@ impl Question {
                 Message {
                     role: "user".to_string(),
                     content: message,
-                }
+                },
             ],
             max_tokens,
         }
